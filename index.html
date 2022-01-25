@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <title>animation</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            overflow: hidden;
+            transform: translate(50vw, 50vh) scale(0);
+            animation: image 3s ease-in-out forwards;
+        }
+
+        @keyframes image {
+            25% {
+                transform: translate(-25vw, 0) scale(1);
+
+            }
+
+            50% {
+                border-radius: 0%;
+                transform: translate(0, 0) scale(0.75);
+            }
+
+            75% {
+                border-radius: 50%;
+            }
+
+            100% {
+                border-radius: 50%;
+                transform: translate(0, 0) scale(0.75);
+
+            }
+
+        }
+    </style>
+    <div class="container">
+        <img src="./img.jpg" alt="">
+    </div>
+</body>
+
+</html>
